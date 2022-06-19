@@ -65,7 +65,8 @@ class MPU6050:
     ACCEL_CONFIG = 0x1C
     GYRO_CONFIG = 0x1B
 
-    def __init__(self, address, bus_index):
+    def __init__(self, address, bus_index = 1):
+        # Set address and bus index
         self.address = address
         self.bus = smbus.SMBus(bus_index)
         
